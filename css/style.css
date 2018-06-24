@@ -10,7 +10,7 @@ html:before {
     position: fixed;
     left: 0;
     right: 0;
-    background-image: url("/img/bg.jpg");
+    background-image: url("img/bg.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@ header, footer {
 }
 
 .logo {
-    background: linear-gradient(135deg, rgba(250, 233, 135, 1) 0%, rgba(255, 153, 0, 0.5) 100%), url("/img/sh.jpg");
+    background: linear-gradient(135deg, rgba(250, 233, 135, 1) 0%, rgba(255, 153, 0, 0.5) 100%), url("img/sh.jpg");
     background-size: cover;
     width: 100%;
     position: relative;
