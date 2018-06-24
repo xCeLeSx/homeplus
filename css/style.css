@@ -5,7 +5,7 @@ html {
     padding: 0;
 }
 
-body:before {
+html:before {
     content: "";
     position: fixed;
     left: 0;
@@ -19,6 +19,7 @@ body:before {
     z-index: -1;
 }
 
+body {}
 
 .wrapper {
     background-color: #fefefe;
