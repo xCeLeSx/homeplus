@@ -1,0 +1,3 @@
+﻿Salon - Oświetlenie|light|16|light.jpg|time.txt|Żarówki
+Klimatyzacja|cooling|18|fan.jpg|cooling.txt|Wentylator
+Ogrzewanie|heating|21|heating.jpg|heating.txt|Płonące drzewo

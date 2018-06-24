@@ -1,0 +1,2 @@
+admin|$2y$10$VLznMp0qmEt3YUZzrYlpWu/yEFTobnSVIHEaDbV2WUGp9gyaMwPbu
+test|$2y$10$VLznMp0qmEt3YUZzrYlpWu/yEFTobnSVIHEaDbV2WUGp9gyaMwPbu
