@@ -1,134 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="utf-8">
-    <title>Home Plus
-         - Strona glowna    </title>
+    <title>Home Plus - Strona glowna </title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/button.css">    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/button.css">
+    <meta name="viewport" content="width=device-width">
 </head>
 
-    <body>
+<body>
 
-        <div class="wrapper">
-            <header>
-                Witaj w panelu zarządzania - Home Plus
-            </header>
-            <div class="logo">
-                <h1>Home Plus</h1>
-            </div>
-            <h2>Podstawowe informacje</h2>
-            <div class="info">
-                <div class="box" tabindex="0">
-                    <img src="img/time.svg" class="more" alt="Zegar">
-                    <h3>Czas</h3>
-                    <div class="show">
-                        <div id="time"></div>
-                    </div>
-                </div>
-                <div class="box" id="box-temp" tabindex="0" title="Naciśnij, aby odświeżyć temperaturę">
-                    <img src="img/temp.svg" class="more" alt="Termometr" >
-                    <h3>Temperatura</h3>
-                    <div class="show">
-                        <div id="temp">
-                            22.5&deg;C                        </div>
-                    </div>
-                </div>
-                <div class="box" tabindex="0">
-                    <img src="img/date.svg" class="more" alt="Kalendarz">
-                    <h3>Data</h3>
-                    <div class="show">
-                        <div id="date">
-                            24.06.18                        </div>
-                    </div>
+    <div class="wrapper">
+        <header>
+            Witaj w panelu zarządzania - Home Plus
+        </header>
+        <div class="logo">
+            <h1>Home Plus</h1>
+        </div>
+        <h2>Podstawowe informacje</h2>
+        <div class="info">
+            <div class="box" tabindex="0">
+                <img src="img/time.svg" class="more" alt="Zegar">
+                <h3>Czas</h3>
+                <div class="show">
+                    <div id="time"></div>
                 </div>
             </div>
+            <div class="box" id="box-temp" tabindex="0" title="Naciśnij, aby odświeżyć temperaturę">
+                <img src="img/temp.svg" class="more" alt="Termometr">
+                <h3>Temperatura</h3>
+                <div class="show">
+                    <div id="temp">
+                        23.1&deg;C </div>
+                </div>
+            </div>
+            <div class="box" tabindex="0">
+                <img src="img/date.svg" class="more" alt="Kalendarz">
+                <h3>Data</h3>
+                <div class="show">
+                    <div id="date">
+                        24.06.18 </div>
+                </div>
+            </div>
+        </div>
         <div class="modules">
-    <div class="module light">
+            <div class="module light">
                 <div class="module-name">
                     <h2>﻿Salon - Oświetlenie</h2>
-                    <button data-mode="stan" data-pin="16" onclick="toggle(this)" value="OFF" class="OFF">OFF</button>
+                    <button data-mode="stan" data-pin="16" onclick="toggle(this)" value="ON" class="ON">ON</button>
                 </div>
                 <div class="module-settings"><img src="img/light.jpg" alt="Żarówki
 " class="on">
-                <form action="save.php" method="POST" onsubmit="return potwierdz()">
-                                    <label for="start-time">Czas włączenia: </label>
-                    <input id="start-time" type="time" name="start-time" value="22:08" required>
-                    
-                    <label for="end-time">Czas wyłaczenia: </label>
-                    <input id="end-time" type="time" name="end-time" value="22:22" required>
-                                   
-                  
-                    <input type="hidden" id="pin" name="pin" value="16">
-                    <button type="submit">Zapisz</button>
-                </form>
+                    <form action="save.php" method="POST" onsubmit="return potwierdz()">
+                        <label>Czas włączenia:</label>
+                        <input type="time" name="start-time" value="10:08" required>
+
+                        <label>Czas wyłaczenia:</label>
+                        <input type="time" name="end-time" value="16:22" required>
+
+
+                        <input type="hidden" name="pin" value="16">
+                        <button type="submit">Zapisz</button>
+                    </form>
                 </div>
-</div>
-    <div class="module cooling">
+            </div>
+            <div class="module cooling">
                 <div class="module-name">
                     <h2>Klimatyzacja</h2>
                     <button data-mode="stan" data-pin="18" onclick="toggle(this)" value="ON" class="ON">ON</button>
                 </div>
                 <div class="module-settings"><img src="img/fan.jpg" alt="Wentylator
 " class="on">
-                <form action="save.php" method="POST" onsubmit="return potwierdz()">
-                                                    <label for="cooling-temp">Temperatura, powyżej której włączyć klimatyzacje: </label>
-                    <input id="cooling-temp" type="number" name="cooling-temp" value="22" min="10" max="40" step="0.1" required>
-                   
-                  
-                    <input type="hidden" id="pin" name="pin" value="18">
-                    <button type="submit">Zapisz</button>
-                </form>
+                    <form action="save.php" method="POST" onsubmit="return potwierdz()">
+                        <label>Temperatura, powyżej której włączyć klimatyzacje:</label>
+                        <input type="number" name="cooling-temp" value="22" min="10" max="40" step="0.1" required>
+
+
+                        <input type="hidden" name="pin" value="18">
+                        <button type="submit">Zapisz</button>
+                    </form>
                 </div>
-</div>
-    <div class="module heating">
+            </div>
+            <div class="module heating">
                 <div class="module-name">
                     <h2>Ogrzewanie</h2>
-                    <button data-mode="stan" data-pin="21" onclick="toggle(this)" value="ON" class="ON">ON</button>
+                    <button data-mode="stan" data-pin="21" onclick="toggle(this)" value="OFF" class="OFF">OFF</button>
                 </div>
                 <div class="module-settings"><img src="img/heating.jpg" alt="Płonące drzewo" class="on">
-                <form action="save.php" method="POST" onsubmit="return potwierdz()">
-                                   
-                                    <label for="heating-temp">Temperatura, poniżej której włączyć ogrzewanie: </label>
-                    <input id="heating-temp" type="number" name="heating-temp" value="15" min="-10" max="20" step="0.1" required>
-                  
-                    <input type="hidden" id="pin" name="pin" value="21">
-                    <button type="submit">Zapisz</button>
-                </form>
-                </div>
-</div>
-</div>            <div class="info">
-                <a href="" class="box disabled">
-                    <img src="img/add.svg" class="more" alt="Plus">
-                    <h2>Dodaj moduł</h2>
-                    <div class="show">
-                        Dodaj moduł
-                    </div>
-                </a>
-                <a href="" class="box disabled">
-                    <img src="img/gear.svg" class="more" alt="Zębatka">
-                    <h2>Ustawienia</h2>
-                     <div class="show">
-                         Ustawienia
-                    </div>
-                </a>
-                <a href="logout.php" class="box" onclick="return wyloguj()">
-                    <img src="img/exit.svg" class="more" alt="Wyjście">
-                    <h2>Wyloguj</h2>
-                    <div class="show">
-                          Wyloguj
-                    </div>
-                </a>
-            </div>
-           <footer>Home Plus by Krystian Bachorski &copy; 2008-2018</footer>
-        </div>
-                <script src="js/jquery.min.js"></script>
-        <script src="js/time.js"></script>
-        <script src="js/button.js"></script>
-        
-    </body>
+                    <form action="save.php" method="POST" onsubmit="return potwierdz()">
 
-    </html>
+                        <label for="heating-temp">Temperatura, poniżej której włączyć ogrzewanie:</label>
+                        <input id="heating-temp" type="number" name="heating-temp" value="15" min="-10" max="20" step="0.1" required>
+
+                        <input type="hidden" name="pin" value="21">
+                        <button type="submit">Zapisz</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <a href="" class="box disabled">
+                <img src="img/add.svg" class="more" alt="Plus">
+                <h2>Dodaj moduł</h2>
+                <div class="show">
+                    Dodaj moduł
+                </div>
+            </a>
+            <a href="" class="box disabled">
+                <img src="img/gear.svg" class="more" alt="Zębatka">
+                <h2>Ustawienia</h2>
+                <div class="show">
+                    Ustawienia
+                </div>
+            </a>
+            <a href="logout.php" class="box" onclick="return wyloguj()">
+                <img src="img/exit.svg" class="more" alt="Wyjście">
+                <h2>Wyloguj</h2>
+                <div class="show">
+                    Wyloguj
+                </div>
+            </a>
+        </div>
+        <footer>Home Plus by Krystian Bachorski &copy; 2008-2018</footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/temp.js"></script>
+
+</body>
+</html>
