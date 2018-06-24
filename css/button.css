@@ -1,0 +1,91 @@
+button[type='submit'] {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer;
+    background-color: #ccc;
+    color: black;
+}
+
+button[type='submit']:hover,
+button[type='submit']:focus{
+    background: white;
+}
+
+button:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+button{
+    margin-top: 10px;
+}
+
+.OFF {
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    height: 34px;
+    cursor: pointer;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: none;
+    float: inherit;
+}
+
+.OFF:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.OFF:hover,
+.OFF:focus{
+    background: white;
+}
+.OFF:hover::before,
+.OFF:focus::before{
+    background: #2196F3;
+}
+
+.ON {
+    position: relative;
+    width: 100px;
+    height: 34px;
+    cursor: pointer;
+    background-color: #2196F3;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: none;
+}
+
+.ON:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px)
+}
+
+.ON:hover,
+.ON:focus{
+    background: white;
+}
+.ON:hover::before,
+.ON:focus::before{
+    background: #2196F3;
+}
+
