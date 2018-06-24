@@ -1,5 +1,6 @@
 # HomePlus
 Technika Komputerowa - Projekt
+
 Aplikacja internetowa do sterowania ogrzewaniem i oświetleniem w mieszkaniu
 
 ## Specyfikacja
