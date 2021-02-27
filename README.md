@@ -1,7 +1,7 @@
 # HomePlus
 Technika Komputerowa - Projekt
 
-Aplikacja internetowa do sterowania ogrzewaniem i oświetleniem w mieszkaniu
+Aplikacja internetowa do sterowania ogrzewaniem i oświetleniem w mieszkaniu. 
 
 ## Specyfikacja
 * Układ – Raspberry PI Zero WH,
@@ -21,6 +21,7 @@ Głównym celem aplikacji jest symulowanie sterowania trzema modułami:
 * Oświetlenia – poglądowo dioda żółta,
 * Klimatyzacji – poglądowo dioda niebieska, 
 * Ogrzewania – poglądowo dioda czerwona.
+
 Aplikacja webowa korzysta z systemu logowania (domyślnie login: admin, hasło: test) w celu zabezpieczenia przed niepożądanym dostępem. W przypadku błędnego logowania wyświetla się komunikat. Po pomyślnym zalogowaniu możemy zobaczyć panel główny aplikacji zawierający podgląd na następujące elementy oraz funkcje:
 * Bieżący czas.
 * Bieżącą temperaturę – pobraną z czujnika i wartość zapisaną w układzie, temperatura jest odświeżana automatycznie co 10 sek., możliwe jest również wymuszenie odświeżania manualnie przez kliknięcie na odczytaną temperaturę,
